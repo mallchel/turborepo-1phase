@@ -1,0 +1,13 @@
+{
+  "name": "@shared/header",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "rimraf dist && yarn tsc",
+    "test": "jest --rootDir .",
+    "check-types": "yarn tsc --noEmit",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@shared/ui": "*"
+  }
+}

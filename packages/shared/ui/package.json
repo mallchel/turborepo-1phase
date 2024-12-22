@@ -1,0 +1,9 @@
+{
+  "name": "@shared/ui",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "rimraf dist && yarn tsc",
+    "check-types": "yarn tsc --noEmit",
+    "lint": "eslint ."
+  }
+}

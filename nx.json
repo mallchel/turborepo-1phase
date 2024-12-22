@@ -1,0 +1,9 @@
+{
+  "$schema": "node_modules/nx/schemas/nx-schema.json",
+  "pluginsConfig": {
+    "@nrwl/js": {
+      "analyzeSourceFiles": true
+    }
+  },
+  "defaultProject": "@app/entry-point"
+}

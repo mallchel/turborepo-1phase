@@ -1,0 +1,73 @@
+{
+  "name": "turborepo-1phase",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "turbo run start --filter=@app/entry-point",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "check-types": "turbo run check-types",
+    "test": "export WORKSPACE_ROOT=$(git rev-parse --show-toplevel) && turbo run test -- --config $WORKSPACE_ROOT/jest.config.ts",
+    "deps-graph": "nx graph"
+  },
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/app/*",
+      "packages/shared/*"
+    ]
+  },
+  "packageManager": "yarn@1.22.22",
+  "dependencies": {
+    "jest-transform-css": "^6.0.2",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.9",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-react": "^7.26.3",
+    "@babel/preset-typescript": "^7.26.0",
+    "@eslint/js": "^9.21.0",
+    "@rspack/cli": "^1.2.8",
+    "@rspack/core": "^1.2.8",
+    "@rspack/plugin-react-refresh": "^1.0.1",
+    "@svgr/webpack": "^8.1.0",
+    "@swc-node/register": "~1.9.1",
+    "@swc/cli": "~0.3.12",
+    "@swc/core": "~1.5.7",
+    "@swc/helpers": "~0.5.11",
+    "@testing-library/react": "15.0.6",
+    "@types/jest": "^29.5.12",
+    "@types/react": "18.3.1",
+    "@types/react-dom": "18.3.0",
+    "babel-jest": "^29.7.0",
+    "babel-loader": "^9.2.1",
+    "css-loader": "^7.1.2",
+    "eslint": "^9.21.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-jsx-a11y": "6.10.1",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "5.0.0",
+    "globals": "^16.0.0",
+    "html-webpack-plugin": "^5.6.3",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "mini-css-extract-plugin": "^2.9.2",
+    "nx": "^20.8.0",
+    "prettier": "^2.6.2",
+    "react-refresh": "^0.16.0",
+    "rimraf": "^6.0.1",
+    "sass": "^1.86.0",
+    "sass-embedded": "^1.86.0",
+    "sass-loader": "^16.0.5",
+    "source-map-loader": "^5.0.0",
+    "style-loader": "^4.0.0",
+    "ts-node": "10.9.1",
+    "tslib": "^2.3.0",
+    "turbo": "^2.3.3",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.26.0"
+  }
+}
